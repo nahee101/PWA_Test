@@ -1,0 +1,83 @@
+*{margin: 0; padding: 0;}
+/*전체 초기화*/
+
+/*Header 속성*/
+h1{
+    background-color: salmon;
+    padding: 30px;
+    text-align: center;
+}
+
+/*Nav 속성*/
+.menuWrap{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+
+    padding: 15px;
+}
+
+.menuWrap a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/*게시글 속성*/
+.postWrap{
+    display: grid;
+    grid-template-rows: repeat(2, minmax(300px, auto));
+    /*최소높이 300px 확보*/
+    grid-template-columns: repeat(2, 49%);
+    row-gap: 8px;
+    justify-content: space-around;
+}
+
+.post{
+    background-color: antiquewhite;
+    padding: 5px;
+}
+
+.post > h3{
+    text-align: center;
+    padding: 10px;
+}
+
+.post > p{
+    padding: 5px 0;
+}
+
+hr{
+    background-color: black;
+    height: 1px;
+    border: none;
+}
+
+@media(max-width: 600px){
+    .postWrap{
+        grid-template-rows: repeat(4, minmax(300px, auto));
+        grid-template-columns: repeat(1, 100%);
+        grid-gap: 8px;
+    }
+}
+
+/*공지사항 속성*/
+.noticeWrap{
+    display: grid;
+    grid-template-rows: repeat(1, minmax(300px, auto));
+    grid-template-columns: repeat(1fr);
+}
+
+.notice{
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.notice > h3{
+    text-align: center;
+    padding: 10px;
+}
+
+.notice > p{
+    padding: 5px 0;
+}
